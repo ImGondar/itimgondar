@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>赏金IT部落</title>
+  <meta name="viewport" content="width=1280">
+  <meta name="author" content="北京赏金猎人网络科技有限公司" />
+  <meta name="keywords"   content="赏金猎人，imGondar，大学生，设计，开发，App开发，网站开发，产品设计，UI设计，微信公众号开发" />
+  <meta name="description" content="赏金猎人，imGondar，大学生，设计，开发，App开发，网站开发，产品设计，UI设计，微信公众号开发" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style.min.css">
+  <script src="lib/mobile-util.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <!-- IE9以下提示栏 -->
+  <!--[if lt IE 9]>
+    <style>
+      #top-tip {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        text-align: center;
+        color: #404040;
+        background-color: #F6F1ED;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+      }
+      #top-tip .tip-close {
+        position: absolute;
+        display: block;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        margin: 9px;
+        background: url(images/ie-close.png) no-repeat;
+        cursor: pointer;
+      }
+      #top-tip a {
+        color: #ee7700;
+      }
+      #top-tip a:hover {
+        color: #BE5F00;
+        text-decoration: underline;
+      }
+    </style>
+
+    <div id="top-tip">
+      <span class="tip-close" title="关闭"></span>
+      <p>已经有超过90%的用户使用更高版本 <a target="_blank" title="下载Chrome" href="http://www.google.cn/intl/zh-CN/chrome/">Google Chrome</a> 或 <a target="_blank" href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" title="下载最新版IE浏览器">Internet Explorer</a> 获得了更精彩的体验，您还不试试？</p>
+    </div>
+
+    <script type="text/javascript">
+      $(function() {
+        (function() {
+          $('#top-tip .tip-close').click(function() {
+            $('#top-tip').hide();
+          })
+        })();
+      });
+    </script>
+  <![endif]-->
+
+  <!-- 加载进度条 -->
+  <div id="loading">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+  <!-- 头部 -->
+  <div id="header">
+    <div class="header-container">
+      <div class="container clearfloat">
+        <h1 class="logo">
+          <a href="./" title="赏金IT部落" target="_self">
+            <img src="images/black-logo_202x59.png" alt="赏金IT部落">
+          </a>
+        </h1>
+        <ul class="nav clearfloat">
+          <li class="active">
+            <a class="link" href="#header">首页</a>
+          </li>
+          <li>
+            <a class="link" href="#service">服务</a>
+          </li>
+          <li>
+            <a class="link" href="#case">案例</a>
+          </li>
+          <li>
+            <a class="link" href="#team">团队</a>
+          </li>
+          <li>
+            <a class="link" href="#footer">联系我们</a>
+          </li>
+          <i id="cur-bar"></i>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Banner轮播 -->
+  <div id="banner">
+    <div class="banner-container">
+      <div class="item item-1"></div>
+      <div class="item item-2"></div>
+      <div class="item item-3"></div>
+    </div>
+    <div class="buttons-container">
+      <div class="button prev-button"></div>
+      <div class="button next-button"></div>
+    </div>
+  </div>
+  <!-- 服务 -->
+  <div id="service">
+    <div class="container">
+      <h2>WHAT CAN WE DO</h2>
+      <i class="hr"></i>
+      <h3>服务项目</h3>
+      <ul class="cards clearfloat">
+        <li class="card card-1">
+          <div class="card-icon"></div>
+          <h4>UI/UE/平面设计</h4>
+          <p>设计服务项目包括：网站设计、App设计、广告设计等。我们有专业的产品经理和设计师，竭诚助你将金点子变成最终设计。</p>
+        </li>
+        <li class="card card-2">
+          <div class="card-icon"></div>
+          <h4>WEB开发</h4>
+          <p>网站开发、网页制作、H5开发、响应式开发，只有你想不到的效果，没有我们做不到的前端和后台！</p>
+        </li>
+        <li class="card card-3">
+          <div class="card-icon"></div>
+          <h4>APP开发</h4>
+          <p>Android App开发、iOS App开发，跨平台App；我们有App成功案例，熟悉原生开发和H5开发，专业为你定制你想要的App！</p>
+        </li>
+        <li class="card card-4">
+          <div class="card-icon"></div>
+          <h4>微信开发</h4>
+          <p>微信公众号开发、微信网站开发、微信小程序开发，如：商城系统、点餐系统、微信小应用等，我们，让你拥有自己的品牌！ </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 案例 -->
+  <div id="case">
+    <div class="container">
+      <h2>SUCCESSFUL CASE</h2>
+      <i class="hr"></i>
+      <h3>成功案例</h3>
+      <ul class="cases clearfloat">
+        <li class="case case-1">
+          <a href="http://imgondar.com" target="_blank">
+            <h4>赏金猎人 App</h4>
+            <div class="back">
+              <div class="content">
+                <h5>赏金猎人 App</h5>
+                <p></p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="case case-2">
+          <a href="http://art.helloarron.com" target="_blank">
+            <h4>中央美术学院设计展</h4>
+            <div class="back">
+              <div class="content">
+                <h5>央美设计展</h5>
+                <p>中央美术学院2016毕业作品设计展</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="case case-3">
+          <a href="http://www.newaircloud.com/" target="_blank">
+            <h4>星空云网站</h4>
+            <div class="back">
+              <div class="content">
+                <h5>星空云网站</h5>
+                <p></p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="case case-4">
+          <a href="http://aidongdaojia.com" target="_blank">
+            <h4>爱动到家</h4>
+            <div class="back">
+              <div class="content">
+                <h5>爱动到家</h5>
+                <p></p>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 团队 -->
+  <div id="team">
+    <div class="container">
+      <h2>LEADERS</h2>
+      <i class="hr"></i>
+      <h3>团队成员</h3>
+      <div id="members">
+        <div class="item">
+          <div class="front">
+            <img src="images/member-1-avatar_226x226.jpg" alt="member-1-avatar" />
+            <div class="introduction">
+              <i class="up-arrow"></i>
+              <div class="tt">
+                <h4>汪小熊</h4>
+                <p>全栈工程师/产品经理</p>
+              </div>
+              <div class="content">
+                <h5>项目介绍</h5>
+                <p>赏金猎人Android & iOS</p>
+                <a href="http://imgondar.com" target="_blank" class="project-link">http://imgondar.com</a>
+              </div>
+              <a href="#" class="know-more">了解更多></a>
+            </div>
+          </div>
+          <div class="back back-1">
+            <div class="content">
+              <p>90后全栈工程师兼产品经理，北科大研究生，2010年进入大学后一直学习计算机，曾获北科10佳科技达人称号，擅长互联网Web网站开发，服务器运维，Android和iOS平台App开发，2014年开始创业，带队创办赏金科技，开发并运营赏金猎人App至今。</p>
+            </div>
+            <i class="back-icon"></i>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <div class="introduction">
+              <i class="down-arrow"></i>
+              <div class="tt">
+                <h4>高琦</h4>
+                <p>前端开发工程师</p>
+              </div>
+              <div class="content">
+                <h5>项目介绍</h5>
+                <p>爱智康官网</p>
+                <a href="http://izhikang.com" target="_blank" class="project-link">http://izhikang.com</a>
+              </div>
+              <a href="#" class="know-more">了解更多></a>
+            </div>
+              <img src="images/member-2-avatar_226x226.png" alt="member-2-avatar" />
+          </div>
+          <div class="back back-2">
+            <div class="content">
+              <p>北科大大四学生，计算机科学与技术专业，主要负责前端开发工作，目标是全栈工程师。</p>
+              <p>熟练使用各种基本Web 前端技术并有相关的项目开发经验；</p>
+              <p>喜欢关注新事物、新技术，有较强的学习能力，乐于挑战。</p>
+            </div>
+            <i class="back-icon"></i>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="images/member-3-avatar_226x226.jpg" alt="member-3-avatar" />
+            <div class="introduction">
+              <i class="up-arrow"></i>
+              <div class="tt">
+                <h4>黄焕龙</h4>
+                <p>前端开发工程师</p>
+              </div>
+              <div class="content">
+                <h5>项目介绍</h5>
+                <p>爱动微信平台</p>
+                <a href="http://aidongdaojia.com" target="_blank" class="project-link">http://aidongdaojia.com</a>
+              </div>
+              <a href="#" class="know-more">了解更多></a>
+            </div>
+          </div>
+          <div class="back back-3">
+            <div class="content">
+              <p>前端开发，北科大大四学生，2016年3月开始前端开发学习，擅长html5，css和jquery和bootstrap前端框架。</p>
+            </div>
+            <i class="back-icon"></i>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <div class="introduction">
+              <i class="down-arrow"></i>
+              <div class="tt">
+                <h4>杨荣</h4>
+                <p>全栈工程师</p>
+              </div>
+              <div class="content">
+                <h5>项目介绍</h5>
+                <a href="http://oblog.helloarron.com/" target="_blank" class="project-link">Emlog Material Design<br/>响应式主题</a>
+              </div>
+              <a href="#" class="know-more">了解更多></a>
+            </div>
+              <img src="images/member-4-avatar_226x226.png" alt="member-4-avatar" />
+          </div>
+          <div class="back back-4">
+            <div class="content">
+              <p>90后全栈工程师，北科大研究生，2012年进入大学后一直学习计算机相关技术，曾获北科“87级校友基金创新个人”。</p>
+              <p>擅长互联网Web网站开发，服务器运维，了解并正在学习Android和iOS平台App开发。</p>
+              <p>2014年7月加入赏金猎人创业团队，2015年加入了乐其橙创业公司，现正自学各项技术。</p>
+            </div>
+            <i class="back-icon"></i>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="images/member-5-avatar_226x226.jpg" alt="member-5-avatar" />
+            <div class="introduction">
+              <i class="up-arrow"></i>
+              <div class="tt">
+                <h4>廖荣森</h4>
+                <p>前端开发工程师</p>
+              </div>
+              <div class="content">
+                <h5>项目介绍</h5>
+                <a href="https://github.com/LahK/AutoLayout-for-Web-Development" target="_blank" class="project-link">AutoLayout for Web Development</a>
+              </div>
+              <a href="#" class="know-more">了解更多></a>
+            </div>
+          </div>
+          <div class="back back-5">
+            <div class="content">
+              <p>90后前端工程师，北科大研究生，专业为通信工程，目前在校研究方向为大数据及数据挖掘。对各种编程语言均有涉猎，在W eb方面擅长前端，与Python后端。2016年7月实习于北京大星科技有限公司，主要工作为微信端W bApp的开发。</p>
+            </div>
+            <i class="back-icon"></i>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <div class="introduction">
+              <i class="down-arrow"></i>
+              <div class="tt">
+                <h4>江顺秋</h4>
+                <p>UI 设计师</p>
+              </div>
+              <div class="content">
+                <h5>项目介绍</h5>
+                <p>江苏移动掌上营业厅</p>
+                <a href="http://jmonster.zcool.com.cn/" target="_blank" class="project-link">http://jmonster.zcool.com.cn/</a>
+              </div>
+              <a href="#" class="know-more">了解更多></a>
+            </div>
+            <img src="images/member-6-avatar_226x226.jpg" alt="member-6-avatar" />
+          </div>
+          <div class="back back-6">
+            <div class="content">
+              <p>从事UI 设计3年，负责江苏移动掌上营业厅标准版，校园版项目的设计制作，赏金猎人app设计；</p>
+              <p>曾参与中国电信微店项目UI 设计，云南移动项目网掌营业厅设计等，具有良好的专业知识水平；</p>
+              <p>兼具丰富的工作经验，良好的团队合作精神。</p>
+            </div>
+            <i class="back-icon"></i>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <img src="images/member-7-avatar_226x226.jpg" alt="member-7-avatar" />
+            <div class="introduction">
+              <i class="up-arrow"></i>
+              <div class="tt">
+                <h4>李朝闻</h4>
+                <p>实习程序员</p>
+              </div>
+              <div class="content">
+                <h5>项目介绍</h5>
+                <p>参与赏金猎人APP开发</p>
+                <a href="http://imgondar.com" target="_blank" class="project-link">http://imgondar.com</a>
+              </div>
+              <a href="#" class="know-more">了解更多></a>
+            </div>
+          </div>
+          <div class="back back-7">
+            <div class="content">
+              <p>90后程序员，北科大本科生，15年进入北科学习通信工程，熟悉JavaWeb研发，Android客户端开发。</p>
+            </div>
+            <i class="back-icon"></i>
+          </div>
+        </div>
+        <div class="item">
+          <div class="front">
+            <div class="introduction">
+              <i class="down-arrow"></i>
+              <div class="tt">
+                <h4>王智琦</h4>
+                <p>前端开发工程师</p>
+              </div>
+              <div class="content">
+                <h5>项目介绍</h5>
+                <p>星空云</p>
+                <a href="http://www.newaircloud.com/" target="_blank" class="project-link">方正电子新空云C2B在线服务平台</a>
+              </div>
+              <a href="#" class="know-more">了解更多></a>
+            </div>
+            <img src="images/member-8-avatar_226x226.jpg" alt="member-8-avatar" />
+          </div>
+          <div class="back back-8">
+            <div class="content">
+              <p>北科大计算机系本科生，有两段前端开发实习，四个前端项目经历。是一个乐观开朗、积极向上的蓝胖纸。</p>
+            </div>
+            <i class="back-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <div id="footer">
+    <div class="container">
+      <ul class="clearfloat lists">
+        <li class="list list-logo">
+          <img src="images/white-logo_200x35.png" alt="white-logo" />
+        </li>
+        <li class="list">
+          <h5>业务</h5>
+          <ul class="items">
+            <li class="item">
+              <a target="_blank">UI/UE设计</a>
+            </li>
+            <li class="item">
+              <a target="_blank">WEB开发</a>
+            </li>
+            <li class="item">
+              <a target="_blank">APP开发</a>
+            </li>
+            <li class="item">
+              <a target="_blank">微信开发</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list">
+          <h5>关于我们</h5>
+          <ul class="items">
+            <li class="item">
+              <a target="_blank">关于赏金IT部落</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list">
+          <h5>联系我们</h5>
+          <ul class="items">
+            <li class="item">
+              <p class="email-tt">邮箱：</p>
+              <a href="mailto:littlebearwmx@qq.com" target="_blank">littlebearwmx@qq.com</a>
+            </li>
+            <li class="item">
+              <a target="_blank">新浪微博</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list">
+          <h5>官方微信</h5>
+          <img src="images/qrcode-130x128.jpg" alt="qrcode" />
+        </li>
+      </ul>
+      <p class="address">公司地址：北京市海淀区北四环科群大厦</p>
+      <div class="copyright">
+        <p>服务与帮助 | 京ICP备14026395号-1</p>
+        <p>Copyright2016 All Rights Reserved | 北京赏金猎人网络科技有限公司</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- scripts start -->
+  <script src="lib/jquery-1.12.4.min.js" charset="utf-8"></script>
+  <script src="lib/owl.carousel.min.js" charset="utf-8"></script>
+  <script src="scripts/main.min.js" charset="utf-8"></script>
+  <!-- scripts end -->
+</body>
+
+</html>
